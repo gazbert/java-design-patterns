@@ -1,4 +1,4 @@
-# java-design-patterns
+## java-design-patterns
 
 Cookbook of commonly used Java design patterns based on the infamous GoF Book.
 
@@ -9,7 +9,7 @@ will demonstrate how to use it.
 
 Check the javadoc folder too.
 
-## Behavioural Patterns
+### Behavioural Patterns
 
 1. State
 
