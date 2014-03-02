@@ -6,7 +6,6 @@ package com.gazbert.patterns.behavioural.state;
  * The behaviour of these operations varies depending on which concrete State impl class is
  * currently executing.
  * 
- * <p>
  * @author gazbert
  *
  */

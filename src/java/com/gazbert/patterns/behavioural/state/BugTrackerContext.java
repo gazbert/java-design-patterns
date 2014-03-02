@@ -9,7 +9,6 @@ package com.gazbert.patterns.behavioural.state;
  * <p>
  * This class controls the state transitions and always 'knows' the current state.
  * 
- * <p>
  * @author gazbert
  *
  */

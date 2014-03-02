@@ -1,5 +1,5 @@
 /**
- * <h2>State Pattern</h2>
+ * <h2>State</h2>
  * 
  * Allows an object (behind an interface) to alter its behaviour when its internal state changes.
  * <p>
@@ -20,7 +20,6 @@
  * 
  * Workflow mostly, e.g. a trading system, bug tracker, ...
  * 
- * <p>
  * @author gazbert
  *
  */
