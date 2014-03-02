@@ -3,7 +3,7 @@ package com.gazbert.patterns.behavioural.state;
 /**
  * The State interface.  
  * <p>
- * The behaviour of these operations varies depending on what concrete State impl class is
+ * The behaviour of these operations varies depending on which concrete State impl class is
  * currently executing.
  * 
  * <p>
@@ -13,12 +13,12 @@ package com.gazbert.patterns.behavioural.state;
 public interface BugState {
         
     /**
-     * Update number of hours worked on bug in this state.
+     * Update number of hours worked on a bug in this state.
      */
     void updateHoursWorked(int hours);    
             
     /**
-     * Get cost of the bug fix for this state.  
+     * Returns cost of the bug fix for this state.  
      */
     int getCost();
     

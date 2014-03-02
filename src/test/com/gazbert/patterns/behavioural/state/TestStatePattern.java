@@ -13,10 +13,10 @@ import org.junit.Test;
 public class TestStatePattern 
 {
     /**
-     * Imagine this test is Bugzilla/JIRA and the users log their time working on the bug.
+     * Imagine this test is Bugzilla/JIRA and users log their time working on the bug.
      */
     @Test
-    public void testIt() {
+    public void testStatePattern() {
 	
 	int supportActualCostToDate = 0;
 	int supportExpectedCostToDate = 0;

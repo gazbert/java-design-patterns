@@ -12,16 +12,16 @@ public class EngineeringState implements BugState {
     /** Cost per hour for Engineering work */
     private static final int HOURLY_RATE = 100;
     
-    /** Reference to the state machine */
+    /** Reference to the context */
     private BugTrackerContext bugTracker;
 
     /** Internal state of this object - Cost of the bug */
     private int bugCost;
     
     /**
-     * Constructor takes the state machine as an arg.
+     * Constructor takes the context as an arg.
      * 
-     * @param clockSetup
+     * @param bugTracker
      */
     public EngineeringState(final BugTrackerContext bugTracker)
     {
@@ -43,6 +43,6 @@ public class EngineeringState implements BugState {
 
     @Override
     public void setNextState() {
-	bugTracker.setState(bugTracker.getTestingState());	
+	bugTracker.setState(bugTracker.getTestingState()); // control which state we go to next	
     }
 }

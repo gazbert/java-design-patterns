@@ -2,26 +2,26 @@ package com.gazbert.patterns.behavioural.state;
 
 
 /**
- * Bug is in Closed state/
+ * Bug is in Closed state. This is the terminal state for purposes of demo.
+ * <p>
+ * In reality, we could re-open a bug and send it back to Engineering - we'd do this
+ * in the setNextState() like before.
  * 
  * @author gazbert
  *
  */
 public class ClosedState implements BugState {
-
-    /** Cost per hour for Closed bug it 0! */
-    private static final int HOURLY_RATE = 0;
     
-    /** Reference to the state machine */
+    /** Reference to the context */
     private BugTrackerContext bugTracker;
 
     /** Internal state of this object - Cost of the bug */
     private int bugCost;
     
     /**
-     * Constructor takes the state machine as an arg.
+     * Constructor takes the context as an arg.
      * 
-     * @param clockSetup
+     * @param bugTracker
      */
     public ClosedState(final BugTrackerContext bugTracker)
     {
@@ -33,7 +33,7 @@ public class ClosedState implements BugState {
     
     public void updateHoursWorked(int hoursWorked) {
 	
-	bugCost += (hoursWorked * HOURLY_RATE);
+	// does nothing, as bug closed and nobody working on it
     }
     
     public int getCost() {	
@@ -44,7 +44,6 @@ public class ClosedState implements BugState {
     @Override
     public void setNextState() {
 	
-	// in reality, we'd re-open the bug if there was a problem
 	throw new IllegalStateException("We've hit the end of road for this demo...");	
     }
 }

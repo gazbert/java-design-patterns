@@ -34,9 +34,9 @@ public class BugTrackerContext {
     
     /**
      * Constructor initialises the state context.
-     * 
+     * <p>
      * It creates all the state objects and passes the context into each one.
-     * 
+     * <p>
      * It sets the initial state.
      */
     public BugTrackerContext()
