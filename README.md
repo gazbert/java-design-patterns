@@ -1,6 +1,10 @@
 ## java-design-patterns
 
-Cookbook of commonly used Java design patterns based on the infamous GoF Book.
+Cookbook of commonly used Java design patterns based on examples from: 
+
+* "Design Patterns: Elements of Reusable Object-Oriented Software" - Gamma et al
+* "Head First Design Patterns" - Freeman et al
+* "Java Design Patterns" - Tony Brevis
 
 I'll be adding new patterns to the project on an ad-hoc basis; I have beer to drink and a day job buried in WebRTC ;-)
 
