@@ -13,14 +13,17 @@
  * <p>
  *
  * <h2>Actors</h2>
- * Handler interface - defines the operations that all Concrete Handlers must implement. This is the processHandler() 
- *                     and setNextHandler().
- * Abstract Handler - defines the business method (reviewDocumentRequest) the client calls: this creates and calls
- *                    the Concrete Handlers. 
- * Concrete Handler - they decide if they want to process the Message (getSelectionCriteria) and provide the impl in 
- *                    the handler method (reviewDocument).
- * Message - the message (Document to review in this case) to be sent to the Handlers.
- * Client - Uses the Abstract Handler and calls the business method on it with a Message. The test class is this case.
+ * <ul>
+ * <li>Handler interface - defines the operations that all Concrete Handlers must implement. This is the processHandler() 
+ *                     and setNextHandler().</li>
+ * <li>Abstract Handler - defines the business method (reviewDocumentRequest) the client calls: this creates and calls
+ *                    the Concrete Handlers. </li>
+ * <li>Concrete Handler - they decide if they want to process the Message (getSelectionCriteria) and provide the impl in 
+ *                    the handler method (reviewDocument).</li>
+ * <li>Message - the message (Document to review in this case) to be sent to the Handlers.</li>
+ * <li>Client - Uses the Abstract Handler and calls the business method on it with a Message. The test class is this 
+ *              </li>case.
+ * </ul>
  * 
  * <h2>Usages</h2>
  * 
