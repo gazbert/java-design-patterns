@@ -12,6 +12,16 @@
  * easy to scale and drop new Receivers in to the solution.
  * <p>
  *
+ * <h2>Actors</h2>
+ * Handler interface - defines the operations that all Concrete Handlers must implement. This is the processHandler() 
+ *                     and setNextHandler().
+ * Abstract Handler - defines the business method (reviewDocumentRequest) the client calls: this creates and calls
+ *                    the Concrete Handlers. 
+ * Concrete Handler - they decide if they want to process the Message (getSelectionCriteria) and provide the impl in 
+ *                    the handler method (reviewDocument).
+ * Message - the message (Document to review in this case) to be sent to the Handlers.
+ * Client - Uses the Abstract Handler and calls the business method on it with a Message. The test class is this case.
+ * 
  * <h2>Usages</h2>
  * 
  * Where you have 1 or more interested handlers for a message. And when you want to easily add more handlers in future.

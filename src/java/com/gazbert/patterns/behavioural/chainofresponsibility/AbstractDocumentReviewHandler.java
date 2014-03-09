@@ -26,6 +26,8 @@ public abstract class AbstractDocumentReviewHandler implements DocumentReviewHan
     /**
      * Consumers of the pattern call this method to do stuff.
      * <p>
+     * This is the business method.
+     * <p>
      * In this case, JIRA/Bugzilla would call this with the document to review...
      * 
      * @param document
