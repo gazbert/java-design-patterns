@@ -22,5 +22,7 @@ Any comments/bugs/better ways of doing things, send 'em my way!
 
 1. Builder
 
+### Structural Patterns
 
+1. Adapter
 

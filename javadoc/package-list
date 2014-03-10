@@ -1,2 +1,7 @@
 com.gazbert.patterns.behavioural.chainofresponsibility
 com.gazbert.patterns.behavioural.state
+com.gazbert.patterns.creational.builder
+com.gazbert.patterns.creational.builder.account
+com.gazbert.patterns.creational.builder.customer
+com.gazbert.patterns.structural.adapter
+com.gazbert.patterns.structural.adapter.thirdparty
