@@ -18,7 +18,8 @@
  * implement. The argument to this build() method is the Builder. Director provides the step by step instructions
  * for building something. Each concrete Director simply calls the buildXXX methods on the Builder impl it gets passed.
  * <p>
- * Object creation would use an Abstract Factory in real-world; skipping this for demo simplicity.
+ * Object creation would use an Abstract Factory in the real-world; skipping this for demo simplicity, but take a look
+ * at the Abstract Factory pattern.
  * 
  * <h2>Actors</h2>
  * <ul>
