@@ -21,7 +21,8 @@ Any comments/bugs/better ways of doing things, send 'em my way!
 ### Creational Patterns
 
 1. Builder
-2. Abstract Factory
+2. Factory Method
+3. Abstract Factory
 
 ### Structural Patterns
 
