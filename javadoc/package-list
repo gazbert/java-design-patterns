@@ -1,11 +1,1 @@
-com.gazbert.patterns.behavioural.chainofresponsibility
-com.gazbert.patterns.behavioural.state
-com.gazbert.patterns.creational.abstractfactory
-com.gazbert.patterns.creational.abstractfactory.account
-com.gazbert.patterns.creational.abstractfactory.address
-com.gazbert.patterns.creational.abstractfactory.product
-com.gazbert.patterns.creational.builder
-com.gazbert.patterns.creational.builder.account
-com.gazbert.patterns.creational.builder.customer
-com.gazbert.patterns.structural.adapter
-com.gazbert.patterns.structural.adapter.thirdparty
+com.gazbert.patterns.creational.factorymethod
