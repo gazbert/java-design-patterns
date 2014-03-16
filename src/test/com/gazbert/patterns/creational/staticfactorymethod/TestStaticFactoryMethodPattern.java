@@ -1,4 +1,4 @@
-package com.gazbert.patterns.creationalstaticfactorymethod;
+package com.gazbert.patterns.creational.staticfactorymethod;
 
 import static org.junit.Assert.*;
 
