@@ -8,6 +8,8 @@ import com.gazbert.patterns.creational.factorymethod.products.Product;
 /**
  * This is the abstract factory the Client code uses to build different Product types.
  * <p>
+ * It is a <em>simple</em> factory that contains a <em>static</em> factory method.
+ * <p>
  * The 'factory method' is not abstract like in the traditional Factory Method pattern; it builds/instantiates
  * the actual Product objects. It eliminates the need for creating separate Concrete Factory subclass impls.
  * <p>
