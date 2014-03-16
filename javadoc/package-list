@@ -9,5 +9,7 @@ com.gazbert.patterns.creational.builder.account
 com.gazbert.patterns.creational.builder.customer
 com.gazbert.patterns.creational.factorymethod
 com.gazbert.patterns.creational.factorymethod.products
+com.gazbert.patterns.creational.staticfactorymethod
+com.gazbert.patterns.creationalstaticfactorymethod
 com.gazbert.patterns.structural.adapter
 com.gazbert.patterns.structural.adapter.thirdparty

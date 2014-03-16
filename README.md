@@ -22,7 +22,8 @@ Any comments/bugs/better ways of doing things, send 'em my way!
 
 1. Builder
 2. Factory Method
-3. Abstract Factory
+3. Static Factory Method
+4. Abstract Factory
 
 ### Structural Patterns
 
