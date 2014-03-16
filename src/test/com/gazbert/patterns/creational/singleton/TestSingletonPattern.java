@@ -1,0 +1,97 @@
+package com.gazbert.patterns.creational.singleton;
+
+import static org.junit.Assert.assertTrue;
+
+import org.junit.Test;
+
+
+/**
+ * Demonstrates use of Singleton pattern.
+ * 
+ * @author gazbert
+ *
+ */
+public class TestSingletonPattern
+{
+    /**
+     * Shows using an enum as a Singleton.
+     */
+    @Test
+    public void testUsingEnumSingleton() throws Exception 
+    {
+	final SingletonUsingEnum firstAccessAttempt = SingletonUsingEnum.SINGLE_INSTANCE;
+	final SingletonUsingEnum secondAccessAttempt = SingletonUsingEnum.SINGLE_INSTANCE;
+	
+	// Same object? Hope so!
+	assertTrue(firstAccessAttempt == secondAccessAttempt); // reference same object
+	assertTrue(firstAccessAttempt.equals(secondAccessAttempt)); // and equality the same in this case
+	
+	// Use the Singleton to so something that mandates only 1 instance of the class e.g
+	// for controlling sequential access to writing a log file
+	firstAccessAttempt.log("Logging some data...");
+    }
+    
+    /**
+     * Shows the 'classic' way of using an <em>eager</em> Singleton.
+     */
+    @Test
+    public void testUsingClassicEagerSingleton() throws Exception 
+    {
+	final ClassicEagerSingleton firstAccessAttempt = ClassicEagerSingleton.getInstance();
+	final ClassicEagerSingleton secondAccessAttempt = ClassicEagerSingleton.getInstance();
+	
+	// Same object? Hope so!
+	assertTrue(firstAccessAttempt == secondAccessAttempt); // reference same object
+	assertTrue(firstAccessAttempt.equals(secondAccessAttempt)); // and equality the same in this case
+	
+	// Use the Singleton to so something that mandates only 1 instance of the class e.g
+	// for controlling sequential access to writing a log file
+	firstAccessAttempt.log("Logging some data...");
+    }
+    
+    /**
+     * Shows the 'classic' way of using an <em>lazy</em> Singleton using Double Checked Locking.
+     * <p>
+     * NOTE: This technique only works for Java 5 and above.
+     */
+    @Test
+    public void testUsingClassicLazySingletonUsingDoubleCheckedLocking() throws Exception 
+    {
+	final ClassicLazySingletonUsingDoubleCheckedLocking firstAccessAttempt =
+		ClassicLazySingletonUsingDoubleCheckedLocking.getInstance();
+	final ClassicLazySingletonUsingDoubleCheckedLocking secondAccessAttempt = 
+		ClassicLazySingletonUsingDoubleCheckedLocking.getInstance();
+	
+	// Same object? Hope so!
+	assertTrue(firstAccessAttempt == secondAccessAttempt); // reference same object
+	assertTrue(firstAccessAttempt.equals(secondAccessAttempt)); // and equality the same in this case
+	
+	// Use the Singleton to so something that mandates only 1 instance of the class e.g
+	// for controlling sequential access to writing a log file
+	firstAccessAttempt.log("Logging some data...");
+    }
+    
+    /**
+     * Shows the 'classic' way of using an <em>lazy</em> Singleton using synchronized method.
+     * <p>
+     * NOTE: This technique works on all versions of Java. But, it is less perfomant than the
+     *       Double Checked Locking approach.
+     */
+    @Test
+    public void testUsingClassicLazySingletonUsingSynchronizedMethod() throws Exception 
+    {
+	final ClassicLazySingletonUsingSynchronizedMethod firstAccessAttempt =
+		ClassicLazySingletonUsingSynchronizedMethod.getInstance();
+	final ClassicLazySingletonUsingSynchronizedMethod secondAccessAttempt = 
+		ClassicLazySingletonUsingSynchronizedMethod.getInstance();
+	
+	// Same object? Hope so!
+	assertTrue(firstAccessAttempt == secondAccessAttempt); // reference same object
+	assertTrue(firstAccessAttempt.equals(secondAccessAttempt)); // and equality the same in this case
+	
+	// Use the Singleton to so something that mandates only 1 instance of the class e.g
+	// for controlling sequential access to writing a log file
+	firstAccessAttempt.log("Logging some data...");
+    }
+}
+   

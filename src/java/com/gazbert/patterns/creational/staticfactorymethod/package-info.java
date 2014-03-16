@@ -1,10 +1,10 @@
 /**
- * <h2>Static Factory Method</h2>
+ * <h2>Static Factory Method / Simple Factory</h2>
  * 
  * The <em>Static</em> Factory Method is essentially the Factory Method pattern where the 'factory method' is
  * declared as being static. Clients call this static method to get the Product created.
  * <p>
- * This pattern is often called the Simple Factory Pattern.
+ * This pattern is often called a Simple Factory.
  * <p>
  * The advantage of this is that he Client only needs to know about and use 1 factory class to build the Product; it
  * combines the work of the Concrete Factories and the Abstract Factory as seen in the traditional Factory Method.  The
