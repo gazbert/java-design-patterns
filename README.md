@@ -4,7 +4,7 @@ Cookbook of commonly used Java design patterns based on examples from:
 
 * "Design Patterns: Elements of Reusable Object-Oriented Software" - Gamma et al
 * "Head First Design Patterns" - Freeman et al
-* "Java Design Patterns" - Tony Brevis
+* "Java Design Pattern Essentials" - Tony Brevis
 
 I'll be adding new patterns to the project on an ad-hoc basis; I have beer to drink and a day job buried in WebRTC ;-)
 
@@ -29,4 +29,5 @@ Any comments/bugs/better ways of doing things, send 'em my way!
 ### Structural Patterns
 
 1. Adapter
+2. Decorator
 
