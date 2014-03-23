@@ -30,4 +30,5 @@ Any comments/bugs/better ways of doing things, send 'em my way!
 
 1. Adapter
 2. Decorator
+3. Facade
 

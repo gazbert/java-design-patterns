@@ -14,3 +14,4 @@ com.gazbert.patterns.creational.staticfactorymethod
 com.gazbert.patterns.structural.adapter
 com.gazbert.patterns.structural.adapter.thirdparty
 com.gazbert.patterns.structural.decorator
+com.gazbert.patterns.structural.facade
