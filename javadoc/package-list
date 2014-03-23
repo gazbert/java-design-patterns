@@ -13,3 +13,4 @@ com.gazbert.patterns.creational.singleton
 com.gazbert.patterns.creational.staticfactorymethod
 com.gazbert.patterns.structural.adapter
 com.gazbert.patterns.structural.adapter.thirdparty
+com.gazbert.patterns.structural.decorator
