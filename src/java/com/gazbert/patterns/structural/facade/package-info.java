@@ -16,6 +16,7 @@
  * the Client from changes to subsystem interfaces; it is often used during the development cycle to protect other
  * developers from subsystem interface changes.
  * 
+ * <p>
  * @author gazbert
  *
  */

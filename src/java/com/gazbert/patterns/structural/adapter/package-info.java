@@ -27,6 +27,7 @@
  * Integrating 3rd party API classes into an organisation's existing codebase, integrating with legacy code that 
  * cannot be modified, acting as an interim solution when migrating code from a legacy system to a new system.
  * 
+ * <p>
  * @author gazbert
  *
  */

@@ -45,6 +45,7 @@
  * <p>
  * The JDK IO classes make extensive use of decorators for wrapping the various IO stream classes. 
  * 
+ * <p>
  * @author gazbert
  *
  */

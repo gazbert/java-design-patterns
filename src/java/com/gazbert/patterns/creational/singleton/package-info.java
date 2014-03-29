@@ -22,6 +22,7 @@
  * When you only want 1 instance of a class at runtime. Typically used to wrap and control access to configuration,
  * log files, registry/database/catalogue/dictionary implementations where atomicity is crucial.
  * 
+ * <p>
  * @author gazbert
  *
  */

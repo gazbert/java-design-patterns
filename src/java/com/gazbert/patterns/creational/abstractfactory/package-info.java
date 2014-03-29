@@ -40,6 +40,7 @@
  * make up a Customer: address, account, financial product. Often combined with the Builder pattern for creating
  * complex objects.
  * 
+ * <p>
  * @author gazbert
  *
  */

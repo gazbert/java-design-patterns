@@ -28,6 +28,7 @@
  * Same usages as the traditional Factory Method. Involves writing fewer classes to build the factory, and the Client
  * has less to do to get something built - always a good thing.
  *  
+ * <p>  
  * @author gazbert
  *
  */

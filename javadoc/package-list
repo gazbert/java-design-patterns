@@ -1,5 +1,6 @@
 com.gazbert.patterns.behavioural.chainofresponsibility
 com.gazbert.patterns.behavioural.state
+com.gazbert.patterns.behavioural.strategy
 com.gazbert.patterns.creational.abstractfactory
 com.gazbert.patterns.creational.abstractfactory.account
 com.gazbert.patterns.creational.abstractfactory.address

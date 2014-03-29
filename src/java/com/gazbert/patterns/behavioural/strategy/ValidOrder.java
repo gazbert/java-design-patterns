@@ -1,0 +1,95 @@
+package com.gazbert.patterns.behavioural.strategy;
+
+import java.math.BigDecimal;
+import java.util.UUID;
+
+/**
+ * Domain object for an Order.
+ * <p>
+ * This is a simple impl for purposes of demo'ing Strat pattern.
+ * <p>
+ * Order is for FX trading of US dollar <> GB pound market.
+ * 
+ * @author gazbert
+ *
+ */
+public class ValidOrder implements Order {
+    
+    /** Id */
+    private UUID orderId;
+
+    /** US dollar (strike) price e.g. 0.69 */
+    private BigDecimal usdPrice;
+        
+    /** Amount of USD to trade */
+    private BigDecimal usdAmount;  
+    
+    /** Amount of GBP to trade */
+    private BigDecimal gbpAmount;
+    
+    /** Just here for sake of demo */
+    private String strategyUsed;
+
+    /**
+     * Builds the order.
+     * 
+     * @param usdPrice
+     * @param gbpPrice
+     * @param numberOfUnits
+     */
+    public ValidOrder(final BigDecimal usdPrice, final BigDecimal usdAmount, BigDecimal gbpAmount)
+    {
+	this.usdPrice = usdPrice;
+	this.usdAmount =  usdAmount;
+	this.gbpAmount = gbpAmount;	
+	
+	this.orderId = UUID.randomUUID();
+    }
+    
+    @Override
+    public BigDecimal getUsdPrice() {
+        return usdPrice;
+    }
+
+    @Override
+    public void setUsdPrice(final BigDecimal usdPrice) {
+        this.usdPrice = usdPrice;
+    }
+
+    @Override
+    public BigDecimal getUsdAmount() {
+        return usdAmount;
+    }
+
+    @Override
+    public void setUsdAmount(final BigDecimal usdAmount) {
+        this.usdAmount = usdAmount;
+    }
+
+    @Override
+    public BigDecimal getGbpAmount() {
+        return gbpAmount;
+    }
+
+    @Override
+    public void setGbpAmount(final BigDecimal gbpAmount) {
+        this.gbpAmount = gbpAmount;
+    }
+
+    @Override
+    public UUID getOrderId() {
+        return orderId;
+    }
+    
+    ///// just for demo so we can show how diff strats are used in unit test /////
+    
+    @Override
+    public String getStrategyUsed() {
+        return strategyUsed;
+    }
+
+    @Override
+    public void setStrategyUsed(String strategyUsed) {
+        this.strategyUsed = strategyUsed;
+    }    
+}

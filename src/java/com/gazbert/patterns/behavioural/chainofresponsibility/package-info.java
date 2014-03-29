@@ -30,7 +30,7 @@
  * Where you have 1 or more interested handlers for a message. And when you want to easily add more handlers in future.
  * 
  * E.g. Document review system, Bank/Merchant email enquires, etc...   
- * 
+ * <p>
  * @author gazbert
  */
 package com.gazbert.patterns.behavioural.chainofresponsibility;

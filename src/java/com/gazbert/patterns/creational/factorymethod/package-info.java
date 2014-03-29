@@ -32,6 +32,7 @@
  * based on some information you pass it. Also stops client code from using 'new' all over the place by encapsulating 
  * the point of object creation; it keeps knowledge of how to create an object localised.
  *  
+ * <p>
  * @author gazbert
  *
  */

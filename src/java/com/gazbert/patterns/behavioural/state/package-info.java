@@ -30,6 +30,7 @@
  * 
  * Workflow mostly, e.g. a trading system, bug tracker, ...
  * 
+ * <p>
  * @author gazbert
  *
  */
