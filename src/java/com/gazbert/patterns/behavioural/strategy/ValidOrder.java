@@ -27,8 +27,6 @@ public class ValidOrder implements Order {
     /** Amount of GBP to trade */
     private BigDecimal gbpAmount;
     
-    /** Just here for sake of demo */
-    private String strategyUsed;
 
     /**
      * Builds the order.
@@ -80,16 +78,4 @@ public class ValidOrder implements Order {
     public UUID getOrderId() {
         return orderId;
     }
-    
-    ///// just for demo so we can show how diff strats are used in unit test /////
-    
-    @Override
-    public String getStrategyUsed() {
-        return strategyUsed;
-    }
-
-    @Override
-    public void setStrategyUsed(String strategyUsed) {
-        this.strategyUsed = strategyUsed;
-    }    
 }

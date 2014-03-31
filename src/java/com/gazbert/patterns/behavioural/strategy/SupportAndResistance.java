@@ -26,9 +26,6 @@ public class SupportAndResistance implements TradingStrategy {
 		new BigDecimal(100),
 		new BigDecimal(68.5));
 	
-	// just for logging to show chosen strat - wouldn't do this in real world.
-	orderToPlace.setStrategyUsed(this.getClass().getSimpleName());
-	
 	// send order off to exchange...
     }
 }

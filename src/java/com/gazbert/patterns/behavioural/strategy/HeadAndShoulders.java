@@ -26,9 +26,6 @@ public class HeadAndShoulders implements TradingStrategy {
 		new BigDecimal(100),
 		new BigDecimal(66));
 	
-	// just for logging to show chosen strat - wouldn't do this in real world.
-	orderToPlace.setStrategyUsed(this.getClass().getSimpleName());
-	
 	// send order off to exchange...
     }
 }

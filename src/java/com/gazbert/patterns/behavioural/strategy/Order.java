@@ -52,8 +52,4 @@ interface Order {
      * @param gbpAmount
      */
     void setGbpAmount(BigDecimal gbpAmount);
-
-    // just here for testing...
-    String getStrategyUsed();
-    void setStrategyUsed(String strategyUsed);
 }

@@ -25,9 +25,6 @@ public class DoubleBottomStrategy implements TradingStrategy {
 		new BigDecimal(0.69), 
 		new BigDecimal(100),
 		new BigDecimal(69));
-	
-	// just for logging to show chosen strat - wouldn't do this in real world.
-	orderToPlace.setStrategyUsed(this.getClass().getSimpleName());
 	 
 	// send order off to exchange...
     }

@@ -51,16 +51,4 @@ public class NullOrder implements Order {
     public UUID getOrderId() {
 	return UUID.randomUUID();
     }
-
-    ///// just for demo so we can show how diff strats are used in unit test /////
-    
-    @Override
-    public String getStrategyUsed() {
-        return strategyUsed;
-    }
-
-    @Override
-    public void setStrategyUsed(String strategyUsed) {
-        this.strategyUsed = strategyUsed;
-    }  
 }

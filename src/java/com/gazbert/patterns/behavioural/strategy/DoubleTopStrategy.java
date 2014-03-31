@@ -23,9 +23,6 @@ public class DoubleTopStrategy implements TradingStrategy {
 	 */	
 	final Order noOrderThisTimeThanks = new NullOrder();
 	
-	// just for logging to show chosen strat - wouldn't do this in real world.
-	noOrderThisTimeThanks.setStrategyUsed(this.getClass().getSimpleName());
-	
 	// Don't send any order off to exchange...
     }
 }
