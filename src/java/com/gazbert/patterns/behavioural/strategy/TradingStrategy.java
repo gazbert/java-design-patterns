@@ -9,12 +9,12 @@ package com.gazbert.patterns.behavioural.strategy;
  * @author gazbert
  *
  */
-interface TradingStrategy {
+public interface TradingStrategy {
     
     /**
      * This is the Strategy operation all subclasses must provide an algo for.
      * 
      * @param openOrders the current active order book.
      */
-    void execute(OrderBook openOrders);
+    public void execute(OrderBook openOrders);
 }
