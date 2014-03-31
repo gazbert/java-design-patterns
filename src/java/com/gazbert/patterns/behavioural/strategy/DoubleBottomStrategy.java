@@ -11,7 +11,9 @@ import java.math.BigDecimal;
 public class DoubleBottomStrategy implements TradingStrategy {
 
     @Override
-    public Order execute(final OrderBook orders) {
+    public void execute(final OrderBook orders) {
+	
+	System.out.println("Strategy Used: " + this.getClass().getSimpleName());	
 
 	/*
 	 * Code goes in here to impl algo for deciding order to build using past trading history and what's
@@ -26,7 +28,7 @@ public class DoubleBottomStrategy implements TradingStrategy {
 	
 	// just for logging to show chosen strat - wouldn't do this in real world.
 	orderToPlace.setStrategyUsed(this.getClass().getSimpleName());
-	
-	return orderToPlace;
+	 
+	// send order off to exchange...
     }
 }

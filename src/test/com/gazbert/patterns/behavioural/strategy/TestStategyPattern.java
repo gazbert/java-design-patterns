@@ -1,9 +1,5 @@
 package com.gazbert.patterns.behavioural.strategy;
 
-import static org.junit.Assert.*;
-
-import java.math.BigDecimal;
-
 import org.junit.Test;
 
 /**
@@ -17,53 +13,88 @@ import org.junit.Test;
  * To demo the Strategy pattern, the bot is going to use the trading engine context to get next order (if indeed there
  * is one) it needs to place on the FX exchange.
  * <p>
+ * In real-world, the current order book and past trading history would be interpreted/analysed to 
+ * determine which trading strategy to use; the Interpreter pattern would be useful here.
+ * <p>
+ * TODO - assert something!
+ * <p>
  * 
  * @author gazbert
  *
  */
 public class TestStategyPattern 
-{
+{    
     /**
-     * This is the bot passing latest order book to the trading engine to get next order to put on exchange.
+     * Bot has recognised a double bottom pattern; build an order using this strategy...
      */
     @Test
-    public void testStrategyPattern() {
+    public void testTradingUsingDoubleBottomStrategy() {
 	
-	// The latest Order Book fetched from the exchange.
+	// The latest Order Book fetched from the exchange. 
 	final OrderBook latestOrders = new OrderBook();
-	
+		
 	// Create the Context
 	final TradingEngineContext tradingEngineCtx = new TradingEngineContext();
 	
-	// Get next buy order
-	final Order buyOrder = tradingEngineCtx.getBuyOrder(latestOrders);
+	// Select the strategy
+	tradingEngineCtx.setCurrentTradingStrategy(new DoubleBottomStrategy());
 	
-	// Some silly asserts to show how diff strats are used...
-	System.out.println("Strategy Used: " + buyOrder.getStrategyUsed());	   
-	if (buyOrder.getStrategyUsed().equals("DoubleBottomStrategy"))
-	{	    	    
-	    assertEquals(buyOrder.getUsdPrice(), new BigDecimal(0.69));
-	    assertEquals(buyOrder.getUsdAmount(), new BigDecimal(100));
-	    assertEquals(buyOrder.getGbpAmount(), new BigDecimal(69));	   	    
-	}
-	else if (buyOrder.getStrategyUsed().equals("HeadAndShoulders"))
-	{	    
-	    assertEquals(buyOrder.getUsdPrice(), new BigDecimal(0.66));
-	    assertEquals(buyOrder.getUsdAmount(), new BigDecimal(100));
-	    assertEquals(buyOrder.getGbpAmount(), new BigDecimal(66));
-	}
-	else if (buyOrder.getStrategyUsed().equals("SupportAndResistance"))
-	{	    
-	    assertEquals(buyOrder.getUsdPrice(), new BigDecimal(0.685));
-	    assertEquals(buyOrder.getUsdAmount(), new BigDecimal(100));
-	    assertEquals(buyOrder.getGbpAmount(), new BigDecimal(68.5));	   
-	}
-	else if (buyOrder.getStrategyUsed().equals("DoubleTopStrategy"))
-	{	    
-	    // in the demo, this strat decides NOT to place a new order
-	    assertEquals(buyOrder.getUsdPrice(), new BigDecimal(0));
-	    assertEquals(buyOrder.getUsdAmount(), new BigDecimal(0));
-	    assertEquals(buyOrder.getGbpAmount(), new BigDecimal(0));	   
-	}
+	// Create the order and send off to exchange
+	tradingEngineCtx.createNewOrder(latestOrders);
+    }
+    
+    /**
+     * Bot has recognised a head n shoulders pattern; build an order using this strategy...
+     */
+    @Test
+    public void testTradingUsingHeadAndShouldersStrategy() {
+	
+	// The latest Order Book fetched from the exchange. 
+	final OrderBook latestOrders = new OrderBook();
+		
+	// Create the Context
+	final TradingEngineContext tradingEngineCtx = new TradingEngineContext();
+	
+	// Select the strategy
+	tradingEngineCtx.setCurrentTradingStrategy(new HeadAndShoulders());
+	
+	// Create the order and send off to exchange
+	tradingEngineCtx.createNewOrder(latestOrders);
+    }
+    
+    /**
+     * Bot has recognised a double top pattern pattern; build an order using this strategy...
+     */
+    @Test
+    public void testTradingUsingDoubleTopStrategy() {
+	
+	// The latest Order Book fetched from the exchange. 
+	final OrderBook latestOrders = new OrderBook();
+		
+	// Create the Context
+	final TradingEngineContext tradingEngineCtx = new TradingEngineContext();
+	
+	// Select the strategy
+	tradingEngineCtx.setCurrentTradingStrategy(new DoubleTopStrategy());
+	
+	// Create the order and send off to exchange
+	tradingEngineCtx.createNewOrder(latestOrders);
+    }		   
+
+    /**
+     * Bot using default strat; build an order using this strategy...
+     */
+    @Test
+    public void testTradingUsingDefaultStrategy() {
+	
+	// The latest Order Book fetched from the exchange. 
+	final OrderBook latestOrders = new OrderBook();
+		
+	// Create the Context
+	final TradingEngineContext tradingEngineCtx = new TradingEngineContext();
+	
+	// Using default strategy	
+	// Create the order and send off to exchange
+	tradingEngineCtx.createNewOrder(latestOrders);
     }
 }
