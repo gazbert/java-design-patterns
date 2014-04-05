@@ -1,4 +1,10 @@
 com.gazbert.patterns.behavioural.chainofresponsibility
+com.gazbert.patterns.behavioural.observer.jdkeventing
+com.gazbert.patterns.behavioural.observer.jdkeventing.bots
+com.gazbert.patterns.behavioural.observer.jdkobserver
+com.gazbert.patterns.behavioural.observer.jdkobserver.bots
+com.gazbert.patterns.behavioural.observer.oldskool
+com.gazbert.patterns.behavioural.observer.oldskool.bots
 com.gazbert.patterns.behavioural.state
 com.gazbert.patterns.behavioural.strategy
 com.gazbert.patterns.creational.abstractfactory
