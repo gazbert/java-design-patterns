@@ -30,23 +30,23 @@ public class ClassicLazySingletonUsingDoubleCheckedLocking {
      */
     public static ClassicLazySingletonUsingDoubleCheckedLocking getInstance()
     {
-	// 1st check is not synchronized, so we don't get performance hit of going for the mutex;
-	// 99.9999999999% of time the object will be created
-	if (SINGLE_INSTANCE == null)
-	{
-	    // Not created the object yet, so go for class level mutex to block other Clients...
-	    synchronized(ClassicLazySingletonUsingDoubleCheckedLocking.class)
-	    {
-		// double check - some other thread might sneaked in and created the instance in the meantime
+		// 1st check is not synchronized, so we don't get performance hit of going for the mutex;
+		// 99.9999999999% of time the object will be created
 		if (SINGLE_INSTANCE == null)
 		{
-		    SINGLE_INSTANCE = new ClassicLazySingletonUsingDoubleCheckedLocking();		
+		    // Not created the object yet, so go for class level mutex to block other Clients...
+		    synchronized(ClassicLazySingletonUsingDoubleCheckedLocking.class)
+		    {
+				// double check - some other thread might sneaked in and created the instance in the meantime
+				if (SINGLE_INSTANCE == null)
+				{
+				    SINGLE_INSTANCE = new ClassicLazySingletonUsingDoubleCheckedLocking();		
+				}
+		    }	    
 		}
-	    }	    
-	}
-	
-	// most of the time we just drop straight down to here and return the single instance
-	return SINGLE_INSTANCE;
+		
+		// most of the time we just drop straight down to here and return the single instance
+		return SINGLE_INSTANCE;
     }
     
     /**
@@ -56,6 +56,6 @@ public class ClassicLazySingletonUsingDoubleCheckedLocking {
      */
     public void log(String msg)
     {
-	System.out.println("LOG: msg");
+	    System.out.println("LOG: msg");
     } 
 }

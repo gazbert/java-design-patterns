@@ -7,9 +7,9 @@ import com.gazbert.patterns.behavioural.observer.jdkeventing.MarketEventListener
 import com.gazbert.patterns.behavioural.observer.jdkeventing.MarketType;
 
 /**
- * This would not exist in real world. Here because I'm too lazy to type same code for each bot.
+ * This would not exist in real world. Here because I'm too lazy to type same code for each bot...
  * <p>
- * Uses java.util.Observer.
+ * Implements #{link MarketEventListener} to receive price updates...
  * <p>
  * 
  * @author gazbert
@@ -18,20 +18,20 @@ import com.gazbert.patterns.behavioural.observer.jdkeventing.MarketType;
 abstract class AbstractTradingBot implements MarketEventListener
 {
 	/** USD GBP market bid price */
-	private BigDecimal latestDollarStirlingMarketBidPrice = new BigDecimal(0.60);
+	private BigDecimal latestUsdGbpMarketBidPrice = new BigDecimal(0.60);
 	
 	/** USD EUR market bid price */
-	private BigDecimal latestDollarEuroMarketBidPrice = new BigDecimal(0.73);
+	private BigDecimal latestUsdEurMarketBidPrice = new BigDecimal(0.73);
 
 	
-	public BigDecimal getLatestDollarStirlingMarketBidPrice()
+	public BigDecimal getLatestUsdGbpMarketBidPrice()
 	{
-		return latestDollarStirlingMarketBidPrice;
+		return latestUsdGbpMarketBidPrice;
 	}
 
-	public BigDecimal getLatestDollarEuroMarketBidPrice()
+	public BigDecimal getLatestUsdEuroMarketBidPrice()
 	{
-		return latestDollarEuroMarketBidPrice;
+		return latestUsdEurMarketBidPrice;
 	}
 	
 
@@ -44,11 +44,11 @@ abstract class AbstractTradingBot implements MarketEventListener
 		// Bleurgh! but you get the idea...
 		if (newBidPriceEvent.getMarketType() == MarketType.USD_GBP)
 		{
-			latestDollarStirlingMarketBidPrice = newBidPriceEvent.getLatestBidPrice();
+			latestUsdGbpMarketBidPrice = newBidPriceEvent.getLatestBidPrice();
 		}
 		else if (newBidPriceEvent.getMarketType() == MarketType.USD_EUR)
 		{
-			latestDollarEuroMarketBidPrice = newBidPriceEvent.getLatestBidPrice();
+			latestUsdEurMarketBidPrice = newBidPriceEvent.getLatestBidPrice();
 		}
 	}
 }

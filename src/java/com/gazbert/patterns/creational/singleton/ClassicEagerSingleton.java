@@ -31,7 +31,7 @@ public class ClassicEagerSingleton {
      */
     public static ClassicEagerSingleton getInstance()
     {
-	return SINGLE_INSTANCE;
+	    return SINGLE_INSTANCE;
     }
     
     /**
@@ -41,6 +41,6 @@ public class ClassicEagerSingleton {
      */
     public void log(String msg)
     {
-	System.out.println("LOG: msg");
+	    System.out.println("LOG: msg");
     } 
 }

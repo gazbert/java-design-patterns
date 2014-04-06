@@ -17,7 +17,7 @@ public interface MarketEventListener extends EventListener
 	 * <p>
 	 * This is the 'callback' for when bid price changes.
 	 * 
-	 * @param newBidPriceEvent the event with the latest bid price.u
+	 * @param newBidPriceEvent the event with the latest bid price.
 	 */
 	public void onBidPriceUpdate(LatestMarketBidPriceEvent newBidPriceEvent);
 }

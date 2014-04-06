@@ -18,6 +18,6 @@ public enum SingletonUsingEnum {
      */
     public void log(String msg)
     {
-	System.out.println("LOG: msg");
+	    System.out.println("LOG: msg");
     }    
 }

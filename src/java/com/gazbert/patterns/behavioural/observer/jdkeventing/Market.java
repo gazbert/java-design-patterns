@@ -5,12 +5,12 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * This is the Observable/Subject.
+ * This is the Observable.
  * <p>
  * Massively simplified. Use case is that whenever a new order goes in, we update the latest bid price, and notify all
  * bots of the price.
  * <p>
- * For production quality, this lot needs making thread safe etc...
+ * For production quality, this stuff needs making thread safe etc...
  * <p>
  * 
  * @author gazbert
@@ -56,10 +56,10 @@ public abstract class Market
 	/**
 	 * Notifies all Observers of a change.
 	 * 
-	 * TODO - this is often public/protected in lots of other examples I've seen - why??? Surely better to control access to this
-	 * so that Observers are only notified via this class' business methods i.e. createNewBuyOrder?
+	 * TODO - this is often public/protected in lots of other examples I've seen - why??? Surely better to control
+	 * access to this so that Observers are only notified via this class' business methods i.e. createNewBuyOrder?
 	 */
-	protected void notifyObservers()
+	private void notifyObservers()
 	{
 		// Build the event
 		final LatestMarketBidPriceEvent latestBidPriceEvent = new LatestMarketBidPriceEvent(this, lastBidPrice, 
@@ -76,18 +76,13 @@ public abstract class Market
 	
 	/**
 	 * In real life a proper order would come in here, not just the bid price. Keeping it simple...
-	 * 
-	 * @param lastBidPrice
+	 * @param lastBidPrice new price
+	 * @param marketType the market we're trading on
 	 */
 	public void createNewBuyOrder(final BigDecimal lastBidPrice, final MarketType marketType)
 	{
 		this.lastBidPrice = lastBidPrice;
 		this.marketType = marketType;
 		notifyObservers();
-	}	
-	
-	public BigDecimal getLastBidPrice()
-	{
-		return lastBidPrice;
-	}
+	}		
 }

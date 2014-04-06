@@ -15,26 +15,27 @@ import com.gazbert.patterns.behavioural.observer.oldskool.MarketObserver;
 abstract class AbstractTradingBot implements MarketObserver
 {
 	/** USD GBP market bid price */
-	private BigDecimal latestDollarStirlingMarketBidPrice = new BigDecimal(0.60);
+	private BigDecimal latestUsdGbpMarketBidPrice = new BigDecimal(0.60);
 	
 	/** USD EUR market bid price */
-	private BigDecimal latestDollarEuroMarketBidPrice = new BigDecimal(0.73);
+	private BigDecimal latestUsdEurMarketBidPrice = new BigDecimal(0.73);
 	
 	
-	public BigDecimal getLatestDollarStirlingMarketBidPrice()
+	public BigDecimal getLatestUsdGbpMarketBidPrice()
 	{
-		return latestDollarStirlingMarketBidPrice;
+		return latestUsdGbpMarketBidPrice;
 	}
 	
-	public BigDecimal getLatestDollarEuroMarketBidPrice()
+	public BigDecimal getLatestUsdEurMarketBidPrice()
 	{
-		return latestDollarEuroMarketBidPrice;
+		return latestUsdEurMarketBidPrice;
 	}
 	
 	/**
-	 * The callback when stuff has been updated
+	 * The callback when stuff on the Observable (Subject) has been updated.
 	 * 
-	 * @param observable
+	 * @param observable the Observable (Subject) is passed in the update method for Observer to get at the changed 
+	 *                   state.
 	 */
 	@Override
 	public void update(final Market observable)
@@ -42,11 +43,11 @@ abstract class AbstractTradingBot implements MarketObserver
 		// Bleurgh! but you get the idea...
 		if (observable.getMarketType() == MarketType.USD_GBP)
 		{
-			latestDollarStirlingMarketBidPrice = observable.getLastBidPrice();
+			latestUsdGbpMarketBidPrice = observable.getLastBidPrice();
 		}
 		else if (observable.getMarketType() == MarketType.USD_EUR)
 		{
-			latestDollarEuroMarketBidPrice = observable.getLastBidPrice();
+			latestUsdEurMarketBidPrice = observable.getLastBidPrice();
 		}
 	}
 }

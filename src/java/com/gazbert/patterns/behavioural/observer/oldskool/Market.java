@@ -7,7 +7,7 @@ import java.util.List;
 import com.gazbert.patterns.behavioural.observer.jdkeventing.MarketType;
 
 /**
- * This is the Observable/Subject.
+ * This is the Observable.
  * <p>
  * Massively simplified. Use case is that whenever a new order goes in, we update the latest bid price, and notify all
  * bots of the price.
@@ -74,8 +74,8 @@ public abstract class Market
 	
 	/**
 	 * In real life a proper order would come in here, not just the bid price. Keeping it simple...
-	 * 
-	 * @param lastBidPrice
+	 * @param lastBidPrice new price
+	 * @param marketType the market we're trading on
 	 */
 	public void createNewBuyOrder(final BigDecimal lastBidPrice, final MarketType marketType)
 	{
@@ -84,11 +84,19 @@ public abstract class Market
 		notifyObservers();
 	}	
 	
+	/**
+	 * Returns latest bid price.
+	 * @return
+	 */
 	public BigDecimal getLastBidPrice()
 	{
 		return lastBidPrice;
 	}	
 
+	/**
+	 * Returns the market we're trading on.
+	 * @return
+	 */
 	public MarketType getMarketType()
 	{
 		return marketType;

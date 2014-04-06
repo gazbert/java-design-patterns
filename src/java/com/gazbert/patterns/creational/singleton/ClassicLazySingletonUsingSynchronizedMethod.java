@@ -33,13 +33,13 @@ public class ClassicLazySingletonUsingSynchronizedMethod {
      */
     public synchronized static ClassicLazySingletonUsingSynchronizedMethod getInstance()
     {
-	if (SINGLE_INSTANCE == null)
-	{
-	    SINGLE_INSTANCE = new ClassicLazySingletonUsingSynchronizedMethod();		
-	}	    
+		if (SINGLE_INSTANCE == null)
+		{
+		    SINGLE_INSTANCE = new ClassicLazySingletonUsingSynchronizedMethod();		
+	    }	    
 	
-	// most of the time we just drop straight down to here and return the single instance
-	return SINGLE_INSTANCE;
+		// most of the time we just drop straight down to here and return the single instance
+		return SINGLE_INSTANCE;
     }
     
     /**
@@ -49,6 +49,6 @@ public class ClassicLazySingletonUsingSynchronizedMethod {
      */
     public void log(String msg)
     {
-	System.out.println("LOG: msg");
+	    System.out.println("LOG: msg");
     } 
 }

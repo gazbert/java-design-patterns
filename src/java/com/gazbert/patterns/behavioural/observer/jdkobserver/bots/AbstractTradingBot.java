@@ -19,24 +19,24 @@ import com.gazbert.patterns.behavioural.observer.jdkobserver.Market;
 abstract class AbstractTradingBot implements Observer
 {
 	/** USD GBP market bid price */
-	private BigDecimal latestDollarStirlingMarketBidPrice = new BigDecimal(0.60);
+	private BigDecimal latestUsdGbpMarketBidPrice = new BigDecimal(0.60);
 	
 	/** USD EUR market bid price */
-	private BigDecimal latestDollarEuroMarketBidPrice = new BigDecimal(0.73);
+	private BigDecimal latestUsdEurMarketBidPrice = new BigDecimal(0.73);
 	
 	
-	public BigDecimal getLatestDollarStirlingMarketBidPrice()
+	public BigDecimal getLatestUsdGbpMarketBidPrice()
 	{
-		return latestDollarStirlingMarketBidPrice;
+		return latestUsdGbpMarketBidPrice;
 	}
 	
-	public BigDecimal getLatestDollarEuroMarketBidPrice()
+	public BigDecimal getLatestUsdEurMarketBidPrice()
 	{
-		return latestDollarEuroMarketBidPrice;
+		return latestUsdEurMarketBidPrice;
 	}
 	
 	/**
-	 * We let Java do the work this time...
+	 * We let JDK do the work this time...
 	 */
 	@Override
 	public void update(final Observable observable, final Object obj)
@@ -46,11 +46,11 @@ abstract class AbstractTradingBot implements Observer
 		// Bleurgh! but you get the idea...
 		if (market.getMarketType() == MarketType.USD_GBP)
 		{
-			latestDollarStirlingMarketBidPrice = market.getLastBidPrice();
+			latestUsdGbpMarketBidPrice = market.getLastBidPrice();
 		}
 		else if (market.getMarketType() == MarketType.USD_EUR)
 		{
-			latestDollarEuroMarketBidPrice = market.getLastBidPrice();
+			latestUsdEurMarketBidPrice = market.getLastBidPrice();
 		}
 	}
 }

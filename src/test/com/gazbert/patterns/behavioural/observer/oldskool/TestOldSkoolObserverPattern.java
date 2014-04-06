@@ -15,7 +15,8 @@ import com.gazbert.patterns.behavioural.observer.oldskool.bots.HsbcTradingBot;
 /**
  * Demonstrates use of Observer pattern from scratch. 
  * <p>
- * Use when you cannot use java.util.Observer because your Observable/Subject needs to extend another class.
+ * Use when you cannot use java.util.Observer because your Observable/Subject needs to extend another class, and
+ * the java.util.EventObject mechanism is not suitable for your needs...
  * <p>
  * @author gazbert
  *
@@ -41,9 +42,9 @@ public class TestOldSkoolObserverPattern
 
         // Assert current price from previous day's close
         final BigDecimal yesterdaysPrice = new BigDecimal(0.60);
-        assertTrue(yesterdaysPrice.compareTo(goldman.getLatestDollarStirlingMarketBidPrice()) == 0);
-        assertTrue(yesterdaysPrice.compareTo(hsbc.getLatestDollarStirlingMarketBidPrice()) == 0);
-        assertTrue(yesterdaysPrice.compareTo(boa.getLatestDollarStirlingMarketBidPrice()) == 0);
+        assertTrue(yesterdaysPrice.compareTo(goldman.getLatestUsdGbpMarketBidPrice()) == 0);
+        assertTrue(yesterdaysPrice.compareTo(hsbc.getLatestUsdGbpMarketBidPrice()) == 0);
+        assertTrue(yesterdaysPrice.compareTo(boa.getLatestUsdGbpMarketBidPrice()) == 0);
         
         // A trade occurs on the exchange, so it notifies any observers of latest market bid price...
         final BigDecimal newPrice = new BigDecimal(0.61);
@@ -52,11 +53,11 @@ public class TestOldSkoolObserverPattern
     	DollarStirlingMarket.getInstance().createNewBuyOrder(newPrice, MarketType.USD_GBP);
         
         // Did they get price update? 
-        assertTrue(newPrice.compareTo(goldman.getLatestDollarStirlingMarketBidPrice()) == 0);
-        assertTrue(newPrice.compareTo(hsbc.getLatestDollarStirlingMarketBidPrice()) == 0);
+        assertTrue(newPrice.compareTo(goldman.getLatestUsdGbpMarketBidPrice()) == 0);
+        assertTrue(newPrice.compareTo(hsbc.getLatestUsdGbpMarketBidPrice()) == 0);
         
         // No change from yesterday
-        assertTrue(yesterdaysPrice.compareTo(boa.getLatestDollarStirlingMarketBidPrice()) == 0);
+        assertTrue(yesterdaysPrice.compareTo(boa.getLatestUsdGbpMarketBidPrice()) == 0);
         
         // Markets close for the day; bots head out for some much needed Krug...
     	DollarStirlingMarket.getInstance().unregisterPriceOberver(goldman);    	
@@ -82,9 +83,9 @@ public class TestOldSkoolObserverPattern
 
         // Assert current price from previous day's close
         final BigDecimal yesterdaysPrice = new BigDecimal(0.73);
-        assertTrue(yesterdaysPrice.compareTo(goldman.getLatestDollarEuroMarketBidPrice()) == 0);
-        assertTrue(yesterdaysPrice.compareTo(hsbc.getLatestDollarEuroMarketBidPrice()) == 0);
-        assertTrue(yesterdaysPrice.compareTo(boa.getLatestDollarEuroMarketBidPrice()) == 0);
+        assertTrue(yesterdaysPrice.compareTo(goldman.getLatestUsdEurMarketBidPrice()) == 0);
+        assertTrue(yesterdaysPrice.compareTo(hsbc.getLatestUsdEurMarketBidPrice()) == 0);
+        assertTrue(yesterdaysPrice.compareTo(boa.getLatestUsdEurMarketBidPrice()) == 0);
         
         // A trade occurs on the exchange, so it notifies any observers of latest market bid price...
         final BigDecimal newPrice = new BigDecimal(0.61);
@@ -93,11 +94,11 @@ public class TestOldSkoolObserverPattern
         DollarEuroMarket.getInstance().createNewBuyOrder(newPrice, MarketType.USD_EUR);
         
         // Did they get price update? 
-        assertTrue(newPrice.compareTo(goldman.getLatestDollarEuroMarketBidPrice()) == 0);
-        assertTrue(newPrice.compareTo(hsbc.getLatestDollarEuroMarketBidPrice()) == 0);
+        assertTrue(newPrice.compareTo(goldman.getLatestUsdEurMarketBidPrice()) == 0);
+        assertTrue(newPrice.compareTo(hsbc.getLatestUsdEurMarketBidPrice()) == 0);
         
         // No change from yesterday
-        assertTrue(yesterdaysPrice.compareTo(boa.getLatestDollarEuroMarketBidPrice()) == 0);
+        assertTrue(yesterdaysPrice.compareTo(boa.getLatestUsdEurMarketBidPrice()) == 0);
         
         // Markets close for the day; bots head out for some much needed Krug...
         DollarEuroMarket.getInstance().unregisterPriceOberver(goldman);    	

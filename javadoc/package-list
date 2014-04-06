@@ -1,4 +1,5 @@
 com.gazbert.patterns.behavioural.chainofresponsibility
+com.gazbert.patterns.behavioural.observer
 com.gazbert.patterns.behavioural.observer.jdkeventing
 com.gazbert.patterns.behavioural.observer.jdkeventing.bots
 com.gazbert.patterns.behavioural.observer.jdkobserver

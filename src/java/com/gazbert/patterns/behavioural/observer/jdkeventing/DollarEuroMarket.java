@@ -2,7 +2,7 @@ package com.gazbert.patterns.behavioural.observer.jdkeventing;
 
 
 /**
- * A Concrete Subject. Also called a Concrete Observable.
+ * A Subject. Also called a Concrete Observable.
  * 
  * @author gazbert
  *

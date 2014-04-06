@@ -4,7 +4,7 @@ import java.math.BigDecimal;
 import java.util.EventObject;
 
 /**
- * Event sent from the Observable to the interested Observers when a new bid price has come in.
+ * Event sent from the Subject to interested Observers when a new bid price comes in.
  * <p>
  * @author gazbert
  *

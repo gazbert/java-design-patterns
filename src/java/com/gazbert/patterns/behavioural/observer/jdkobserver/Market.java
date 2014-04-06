@@ -6,14 +6,15 @@ import java.util.Observable;
 import com.gazbert.patterns.behavioural.observer.jdkeventing.MarketType;
 
 /**
- * This is the Observable/Subject.
+ * This is the Observable.
  * <p>
  * Massively simplified. Use case is that whenever a new order goes in, we update the latest bid price, and notify all
  * bots of the price.
  * <p>
  * For production quality, this lot needs making thread safe etc...
  * <p>
- * Uses java.util.Observable - cuts down on boiler-plate code, but we can't extend another class :-(
+ * Uses java.util.Observable - it cuts down on boiler-plate code. We could not use this approach if the Observable
+ * already extended another class; lucky for us it doesn't.
  * <p>
  * 
  * @author gazbert
@@ -31,24 +32,32 @@ public abstract class Market extends Observable
 	
 	/**
 	 * In real life a proper order would come in here, not just the bid price. Keeping it simple...
-	 * 
-	 * @param lastBidPrice
+	 * @param lastBidPrice new price
+	 * @param marketType the market we're trading on
 	 */
 	public void createNewBuyOrder(final BigDecimal lastBidPrice, final MarketType marketType)
 	{
 		this.lastBidPrice = lastBidPrice;
 		this.marketType = marketType;
 		
-		// tell java.util it's changed
+		// tell java.util it's changed -calls up to superclass Observable
 		setChanged();
 		notifyObservers();
 	}	
 	
+	/**
+	 * Returns the last bid price.
+	 * @return
+	 */
 	public BigDecimal getLastBidPrice()
 	{
 		return lastBidPrice;
 	}
 
+	/**
+	 * Returns the market being observed.
+	 * @return
+	 */
 	public MarketType getMarketType()
 	{
 		return marketType;
