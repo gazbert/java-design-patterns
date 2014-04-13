@@ -34,7 +34,7 @@ Any comments/bugs/better ways of doing things, send 'em my way!
 2. Decorator
 3. Facade
 
-#### Patterns Coming Soon...
+##### Patterns Coming Soon...
 
 1. Template Method
 2. Proxy
