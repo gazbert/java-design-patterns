@@ -23,13 +23,16 @@ public abstract class InvestmentFundFactory {
     /** Some sample financial investment products for purposes of the demo */
     public enum ProductType 
     {
-	OEIC, 
-	GILT,
-	INVESTMENT_TRUST,
-	CASH_SAVINGS_ACCOUNT,
-	GUARANTEED_INCOME_BOND
+        OEIC, 
+        GILT,
+        INVESTMENT_TRUST,
+        CASH_SAVINGS_ACCOUNT,
+        GUARANTEED_INCOME_BOND
     };
 
+    // lockdown
+    private InvestmentFundFactory() {}
+    
     /**
      * This is the business method for the Client code to call to create Products.
      * <p>
@@ -43,26 +46,26 @@ public abstract class InvestmentFundFactory {
      */
     public static Product build(boolean forUseInAnIsa, final ProductType productType)
     {	
-	final Product product;
-	
-	if (productType == ProductType.GILT)
-	{
-	    product = new Gilt();
-	}
-	else if (productType == ProductType.OEIC)
-	{
-	    product = new Oeic();
-	}
-	else if (productType == ProductType.INVESTMENT_TRUST)
-	{
-	    product = new InvestmentTrust();
-	}
-	else
-	{
-	    throw new IllegalArgumentException("Can't build unknown productType: " + productType);
-	}
-	
-	product.setIsTaxable(!forUseInAnIsa);	
-	return product;
+        final Product product;
+
+        if (productType == ProductType.GILT)
+        {
+            product = new Gilt();
+        }
+        else if (productType == ProductType.OEIC)
+        {
+            product = new Oeic();
+        }
+        else if (productType == ProductType.INVESTMENT_TRUST)
+        {
+            product = new InvestmentTrust();
+        }
+        else
+        {
+            throw new IllegalArgumentException("Can't build unknown productType: " + productType);
+        }
+
+        product.setIsTaxable(!forUseInAnIsa);	
+        return product;
     }
 }
