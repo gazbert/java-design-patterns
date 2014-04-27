@@ -1,6 +1,5 @@
 package com.gazbert.patterns.behavioural.strategy;
 
-
 /*The MIT License (MIT)
 
 Copyright (c) 2014 Gazbert
