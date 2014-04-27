@@ -17,21 +17,21 @@ public class TestChainOfResponsibilityPattern
      */
     @Test
     public void testStatePattern() {
-	
-	String document = "New sales targets for 2nd quarter.";
-	AbstractDocumentReviewHandler.reviewDocumentRequest(document);
-	assertEquals("sales", AbstractDocumentReviewHandler.getHandledBy());
-	
-	document = "Iteration plan for developing Video Calling feature.";
-	AbstractDocumentReviewHandler.reviewDocumentRequest(document);
-	assertEquals("engineering", AbstractDocumentReviewHandler.getHandledBy());
-	
-	document = "Integration test plan for Citi.";
-	AbstractDocumentReviewHandler.reviewDocumentRequest(document);
-	assertEquals("testing", AbstractDocumentReviewHandler.getHandledBy());
-	
-	document = "New support escalation procedures for JP Morgan";
-	AbstractDocumentReviewHandler.reviewDocumentRequest(document);
-	assertEquals("support", AbstractDocumentReviewHandler.getHandledBy());	
+
+        String document = "New sales targets for 2nd quarter.";
+        AbstractDocumentReviewHandler.reviewDocumentRequest(document);
+        assertEquals("sales", AbstractDocumentReviewHandler.getHandledBy());
+
+        document = "Iteration plan for developing Video Calling feature.";
+        AbstractDocumentReviewHandler.reviewDocumentRequest(document);
+        assertEquals("engineering", AbstractDocumentReviewHandler.getHandledBy());
+
+        document = "Integration test plan for Citi.";
+        AbstractDocumentReviewHandler.reviewDocumentRequest(document);
+        assertEquals("testing", AbstractDocumentReviewHandler.getHandledBy());
+
+        document = "New support escalation procedures for JP Morgan";
+        AbstractDocumentReviewHandler.reviewDocumentRequest(document);
+        assertEquals("support", AbstractDocumentReviewHandler.getHandledBy());	
     }
 }

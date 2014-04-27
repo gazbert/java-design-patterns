@@ -17,12 +17,12 @@ public abstract class AbstractDocumentReviewHandler implements DocumentReviewHan
 
     /** Here for our test assertions to track who's reviewed the document */
     private static String handledBy = "";
-    
+
     /**
      * Holds reference to the next Handler/Receiver.
      */
     private DocumentReviewHandler nextHandler;  
-    
+
     /**
      * Consumers of the pattern call this method to do stuff.
      * <p>
@@ -34,79 +34,79 @@ public abstract class AbstractDocumentReviewHandler implements DocumentReviewHan
      */
     public static void reviewDocumentRequest(final String document)
     {
-	// Create the handlers/receivers
-	final DocumentReviewHandler supportReviewHandler = new SupportReviewHandler();
-	final DocumentReviewHandler salesReviewHandler = new SalesReviewHandler();
-	final DocumentReviewHandler engineeringReviewHandler = new EngineeringReviewHandler();
-	final DocumentReviewHandler testingReviewHandler = new TestingReviewHandler();
+        // Create the handlers/receivers
+        final DocumentReviewHandler supportReviewHandler = new SupportReviewHandler();
+        final DocumentReviewHandler salesReviewHandler = new SalesReviewHandler();
+        final DocumentReviewHandler engineeringReviewHandler = new EngineeringReviewHandler();
+        final DocumentReviewHandler testingReviewHandler = new TestingReviewHandler();
 
-	// Chain em together - totally random order of chaining here ;-)
-	supportReviewHandler.setNextHandler(salesReviewHandler);
-	salesReviewHandler.setNextHandler(engineeringReviewHandler);
-	engineeringReviewHandler.setNextHandler(testingReviewHandler);	
-	testingReviewHandler.setNextHandler(null); // see NullObjectPattern for better way of 'ending' stuff
-	
-	// New review request comes in and gets routed to support team first... 
-	supportReviewHandler.processHandler(document);
+        // Chain em together - totally random order of chaining here ;-)
+        supportReviewHandler.setNextHandler(salesReviewHandler);
+        salesReviewHandler.setNextHandler(engineeringReviewHandler);
+        engineeringReviewHandler.setNextHandler(testingReviewHandler);	
+        testingReviewHandler.setNextHandler(null); // see NullObjectPattern for better way of 'ending' stuff
+
+        // New review request comes in and gets routed to support team first... 
+        supportReviewHandler.processHandler(document);
     }
-	
+
     @Override
     public void setNextHandler(final DocumentReviewHandler handler) {
-	this.nextHandler = handler;	
+        this.nextHandler = handler;	
     }
 
-    
+
     /*
      * The decision to process the review has been pushed up into the base class; we don't want each subclass
      * duplicating the same thing. 
      */
     @Override
     public void processHandler(String document) {
-	
-	boolean wordFound = false;
-	
-	// check for matching words for this Handler
-	for (String word : getSelectionCriteria())
-	{
-	    if (document.indexOf(word) >= 0)
-	    {
-		wordFound = true;
-		break;
-	    }
-	}	    
-	
-	// Do the handling if we need to...
-	if (wordFound)
-	{
-	    handledBy = reviewDocument(document);
-	}
-	else
-	{
-    	    // Check if next Receiver 'wants it'... ;-o
-    	    if (null != nextHandler)
+
+        boolean wordFound = false;
+
+        // check for matching words for this Handler
+        for (String word : getSelectionCriteria())
+        {
+            if (document.indexOf(word) >= 0)
             {
-    	        nextHandler.processHandler(document);
+                wordFound = true;
+                break;
             }
-	}
+        }	    
+
+        // Do the handling if we need to...
+        if (wordFound)
+        {
+            handledBy = reviewDocument(document);
+        }
+        else
+        {
+            // Check if next Receiver 'wants it'... ;-o
+            if (null != nextHandler)
+            {
+                nextHandler.processHandler(document);
+            }
+        }
     }
-       
+
     /**
      * Only here for unit test code to assert stuff with sake of this demo.
      * @return
      */
     public static String getHandledBy()
     {
-	return handledBy;	
+        return handledBy;	
     }
-    
+
     ///////////////////// Subclass contract for the concrete Handlers ////////////////////////
-    
+
     /**
      * This is where we ask each Handler for its document review selection criteria.
      * @return
      */
     protected abstract String[] getSelectionCriteria();
-    
+
     /**
      * This is where we send the document to interested Handlers.
      * @param document
