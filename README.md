@@ -16,27 +16,27 @@ Any comments/bugs/better ways of doing things, send 'em my way!
 ### Behavioural Patterns
 
 1. State
-2. Chain of Responsibility
-3. Strategy
-4. Observer
+1. Chain of Responsibility
+1. Strategy
+1. Observer
+1. Command
 
 ### Creational Patterns
 
 1. Builder
-2. Factory Method
-3. Static Factory Method / Simple Factory Method
-4. Abstract Factory
-5. Singleton
+1. Factory Method
+1. Static Factory Method / Simple Factory Method
+1. Abstract Factory
+1. Singleton
 
 ### Structural Patterns
 
 1. Adapter
-2. Decorator
-3. Facade
+1. Decorator
+1. Facade
 
 ##### Patterns Coming Soon...
 
 1. Template Method
-2. Proxy
-3. Command
-4. Interpreter
+1. Proxy
+1. Interpreter
