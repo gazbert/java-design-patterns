@@ -11,6 +11,8 @@ I'll be adding new patterns to the project on an ad-hoc basis; I have beer to dr
 Each pattern is contained in its own package - the package-info will provide more details and the Test class 
 will demonstrate how to use it. Check the javadoc folder too.
 
+The tests are written using [JUnit 4](http://junit.org/).
+
 Any comments/bugs/better ways of doing things, send 'em my way!
 
 ### Behavioural Patterns
