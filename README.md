@@ -6,14 +6,14 @@ Cookbook of commonly used Java design patterns based on examples from:
 * "Head First Design Patterns" - Freeman et al
 * "Java Design Pattern Essentials" - Tony Brevis
 
-I'll be adding new patterns to the project on an ad-hoc basis; I have beer to drink and a day job buried in WebRTC ;-)
+I'll be adding new patterns to the project on an ad-hoc basis; I have beer to drink and a day job buried in WebRTC :-)
 
 Each pattern is contained in its own package - the package-info will provide more details and the Test class 
 will demonstrate how to use it. Check the javadoc folder too.
 
 The tests are written using [JUnit 4](http://junit.org/).
 
-Any comments/bugs/better ways of doing things, send 'em my way!
+Any comments/bugs/better ways of doing things, send 'em my way.
 
 ### Behavioural Patterns
 
@@ -37,7 +37,7 @@ Any comments/bugs/better ways of doing things, send 'em my way!
 1. Decorator
 1. Facade
 
-##### Patterns Coming Soon...
+##### Patterns coming soon...
 
 1. Template Method
 1. Proxy
