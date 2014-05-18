@@ -11,6 +11,9 @@ hs_err_pid*
 # javadoc
 /javadoc
 
+# dist
+/dist
+
 # Eclipse stuff
 .classpath
 .project
