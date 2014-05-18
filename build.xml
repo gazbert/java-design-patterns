@@ -51,18 +51,23 @@ Expects junit-4.8.2.jar to be present in the libs dir; the Maven build script do
     </target>
 	
 	<target name="test" depends="compile-tests">
-    	<junit showoutput="yes" fork="true">
+		
+        <mkdir dir="${dist.dir}/test-results"/>
+		
+    	<junit showoutput="yes" fork="true" printsummary="yes"  haltonfailure="yes">
     	    <classpath>
     	        <pathelement location="${libs.dir}/junit-4.8.2.jar"/>
     	    	<pathelement path="${build.java.dir}"/>
                 <pathelement path="${build.test.dir}"/>
     	    </classpath>
     
-    	    <formatter type="plain" usefile="false" />
+    	    <formatter type="plain"/>
+    	    <formatter type="xml"/>
     
     		<!-- expects JUnit4 annotations -->
-    	    <batchtest>
-    	        <fileset dir="${src.test.dir}"/>
+    	    <batchtest todir="${dist.dir}/test-results/">
+    	        <fileset dir="${src.test.dir}">
+    	        </fileset>
     	    </batchtest>
     	</junit> 
     </target>
