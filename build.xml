@@ -13,8 +13,8 @@ Expects junit-4.8.2.jar to be present in the libs dir; the Maven build script do
 	
     <!-- Directory structure -->
     <property name="src.dir" location="src"/>
-    <property name="src.java.dir" location="${src.dir}/java"/>
-	<property name="src.test.dir" location="${src.dir}/test"/>
+    <property name="src.java.dir" location="${src.dir}/main/java"/>
+	<property name="src.test.dir" location="${src.dir}/test/java"/>
 	<property name="build.java.dir" location="build/java"/>
 	<property name="build.test.dir" location="build/test"/>
     <property name="libs.dir" location="libs"/>
@@ -84,8 +84,8 @@ Expects junit-4.8.2.jar to be present in the libs dir; the Maven build script do
 		     windowtitle="Java Design Patterns Cookbook">
 
 		    <fileset dir="${src.dir}" defaultexcludes="yes">
-		      <include name="java/com/gazbert/**"/>
-		      <include name="test/com/gazbert/**"/>
+		      <include name="main/java/com/gazbert/**"/>
+		      <include name="test/java/com/gazbert/**"/>
 		    </fileset>
 		 	
 		    <doctitle><![CDATA[<h1>Java Design Patterns Cookbook</h1>]]></doctitle>
