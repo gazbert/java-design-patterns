@@ -22,6 +22,7 @@ Any comments/bugs/better ways of doing things, send 'em my way.
 1. Strategy
 1. Observer
 1. Command
+1. Template Method
 
 ### Creational Patterns
 
@@ -39,6 +40,5 @@ Any comments/bugs/better ways of doing things, send 'em my way.
 
 ##### Patterns coming soon...
 
-1. Template Method
 1. Proxy
 1. Interpreter

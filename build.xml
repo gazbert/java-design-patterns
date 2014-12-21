@@ -107,6 +107,7 @@ Expects junit-4.8.2.jar to be present in the libs dir; the Maven build script do
     	
         <zip destfile="${dist.dir}/zip/${ant.project.name}.zip">
         	
+        	<zipfileset dir="${src.dir}" prefix="src"/>
     	    <zipfileset dir="${libs.dir}" prefix="libs"/>
             <zipfileset dir="${dist.dir}/resources" prefix="resources"/>
             <zipfileset dir="." includes="ada.sh"/>

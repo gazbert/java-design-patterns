@@ -25,12 +25,14 @@
 				<include>README*</include>
 				<include>LICENSE*</include>
 				<include>resources/*.properties</include>
+                <include>src/main/java/**/*</include>
+                <include>src/test/java/**/*</include>
 			</includes>
 		</fileSet>
 
 		<fileSet>
-			<directory>${project.build.directory}/site</directory>
-			<outputDirectory>docs</outputDirectory>
+			<directory>${project.build.directory}/apidocs</directory>
+			<outputDirectory>jdoc</outputDirectory>
 		</fileSet>
 	</fileSets>
 
