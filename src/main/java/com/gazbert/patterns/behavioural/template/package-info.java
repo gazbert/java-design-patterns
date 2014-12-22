@@ -8,7 +8,7 @@
  * flow of the behaviour and call down to the subclasses to provide specific behaviour.  The template
  * pattern <em>must</em> be final in order to prevent subclasses from changing the overall behaviour.
  * <p>
- * Some of the hooks can have default behaviour - in case the subclasses choose not to override them - but
+ * It makes use of the 'Hollywood Principle' - don't call us, we'll call you. Some of the hooks can have default behaviour - in case the subclasses choose not to override them - but
  * there should always be at least 1 abstract hook to in a Template pattern.
  * <p>
  * One final thing, the hook methods should have protected access - only subclasses should be able to use them. They are

@@ -23,6 +23,7 @@ CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.*/
 
 import java.math.BigDecimal;
 import java.text.DecimalFormat;
+import java.util.List;
 
 /**
  * This is the main abstract template class.
@@ -40,6 +41,7 @@ public abstract class FundInfoCollectionTemplate
     protected abstract String getFundType();
     protected abstract String getFundGoal();
     protected abstract BigDecimal calculateManagementFee();
+    protected abstract List<String> getHoldings(); 
            
     // Here we have a hook with a default impl.
     protected String getFundCurrency()
@@ -60,8 +62,15 @@ public abstract class FundInfoCollectionTemplate
         System.out.println("Fund Type: " + getFundType());
         System.out.println("Fund Goal: " + getFundGoal());
         System.out.println("Fund Currency: " + getFundCurrency());
-        System.out.println("Fund Management Fee: " + new DecimalFormat("#.###").format(calculateManagementFee()) + "%");        
+        System.out.println("Fund Management Fee: " + new DecimalFormat("#.###").format(calculateManagementFee()) + "%");
         
-        System.out.println("END of main template method.\n");
+        System.out.print("Fund Holdings: ");
+        final List<String> fundHoldings = getHoldings();
+        for (final String stock : fundHoldings)
+        {
+            System.out.print(stock + ", ");
+        }
+        
+        System.out.println("\nEND of main template method.\n");
     }
 }
