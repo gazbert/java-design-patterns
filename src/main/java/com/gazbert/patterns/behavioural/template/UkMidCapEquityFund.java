@@ -22,15 +22,17 @@ IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN
 CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.*/
 
 import java.math.BigDecimal;
+import java.util.Arrays;
+import java.util.List;
 
 /**
+ * The UK Mid Caps (FTSE 250) Fund and its implementation of the template method hooks.
  * 
  * @author gazbert
  *
  */
 public class UkMidCapEquityFund extends FundInfoCollectionTemplate
 {
-
     @Override
     protected String getFundName()
     {
@@ -53,5 +55,12 @@ public class UkMidCapEquityFund extends FundInfoCollectionTemplate
     protected BigDecimal calculateManagementFee()
     {
         return new BigDecimal(0.014);
+    }
+    
+    @Override
+    protected List<String> getHoldings()
+    {
+        final String[] holdings = { "Aston Martin", "Harrods", "Telegraph Media Group", "Ocado"};
+        return Arrays.asList(holdings);
     }
 }
