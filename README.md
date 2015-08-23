@@ -6,12 +6,10 @@ Cookbook of commonly used Java design patterns based on examples from:
 * "Head First Design Patterns" - Freeman et al
 * "Java Design Pattern Essentials" - Tony Brevis
 
-I'll be adding new patterns to the project on an ad-hoc basis; I have beer to drink and a day job buried in WebRTC :-)
+I'll be adding new patterns to the project on an ad-hoc basis.
 
 Each pattern is contained in its own package - the package-info will provide more details and the Test class 
-will demonstrate how to use it. Check the javadoc folder too.
-
-The tests are written using [JUnit 4](http://junit.org/).
+will demonstrate how to use it.
 
 Any comments/bugs/better ways of doing things, send 'em my way.
 
