@@ -1,6 +1,8 @@
 ## java-design-patterns
 
-Cookbook of commonly used Java design patterns based on examples from: 
+[![Build Status](https://travis-ci.org/gazbert/java-design-patterns.svg?branch=master)](https://travis-ci.org/gazbert/java-design-patterns)
+
+A cookbook of commonly used Java design patterns based on examples from: 
 
 * "Design Patterns: Elements of Reusable Object-Oriented Software" - Gamma et al
 * "Head First Design Patterns" - Freeman et al
