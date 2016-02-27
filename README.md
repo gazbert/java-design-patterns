@@ -23,6 +23,7 @@ Any comments/bugs/better ways of doing things, send 'em my way.
 1. Observer
 1. Command
 1. Template Method
+1. Visitor
 
 ### Creational Patterns
 
@@ -37,8 +38,3 @@ Any comments/bugs/better ways of doing things, send 'em my way.
 1. Adapter
 1. Decorator
 1. Facade
-
-##### Patterns coming soon...
-
-1. Proxy
-1. Interpreter
