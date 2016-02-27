@@ -1,25 +1,27 @@
+/*
+ * The MIT License (MIT)
+ *
+ * Copyright (c) 2016 Gareth Jon Lynch
+ *
+ * Permission is hereby granted, free of charge, to any person obtaining a copy of
+ * this software and associated documentation files (the "Software"), to deal in
+ * the Software without restriction, including without limitation the rights to
+ * use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of
+ * the Software, and to permit persons to whom the Software is furnished to do so,
+ * subject to the following conditions:
+ *
+ * The above copyright notice and this permission notice shall be included in all
+ * copies or substantial portions of the Software.
+ *
+ * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS
+ * FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR
+ * COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER
+ * IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN
+ * CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+ */
+
 package com.gazbert.patterns.behavioural.strategy;
-
-/*The MIT License (MIT)
-
-Copyright (c) 2014 Gazbert
-
-Permission is hereby granted, free of charge, to any person obtaining a copy of
-this software and associated documentation files (the "Software"), to deal in
-the Software without restriction, including without limitation the rights to
-use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of
-the Software, and to permit persons to whom the Software is furnished to do so,
-subject to the following conditions:
-
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
-
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS
-FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR
-COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER
-IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN
-CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.*/
 
 import java.math.BigDecimal;
 import java.util.UUID;
@@ -30,37 +32,43 @@ import java.util.UUID;
  * This is a simple impl for purposes of demo'ing Strat pattern.
  * <p>
  * Order is for FX trading of US dollar <> GB pound market.
- * 
- * @author gazbert
  *
+ * @author gazbert
  */
 public class ValidOrder implements Order {
-    
-    /** Id */
+
+    /**
+     * Id
+     */
     private UUID orderId;
 
-    /** US dollar (strike) price e.g. 0.69 */
+    /**
+     * US dollar (strike) price e.g. 0.69
+     */
     private BigDecimal usdPrice;
 
-    /** Amount of USD to trade */
-    private BigDecimal usdAmount;  
+    /**
+     * Amount of USD to trade
+     */
+    private BigDecimal usdAmount;
 
-    /** Amount of GBP to trade */
+    /**
+     * Amount of GBP to trade
+     */
     private BigDecimal gbpAmount;
 
 
     /**
      * Builds the order.
-     * 
-     * @param usdPrice
-     * @param gbpPrice
-     * @param numberOfUnits
+     *
+     * @param usdPrice USD price
+     * @param usdAmount USD amount
+     * @param gbpAmount GBP amount
      */
-    public ValidOrder(final BigDecimal usdPrice, final BigDecimal usdAmount, BigDecimal gbpAmount)
-    {
+    public ValidOrder(BigDecimal usdPrice, BigDecimal usdAmount, BigDecimal gbpAmount) {
         this.usdPrice = usdPrice;
-        this.usdAmount =  usdAmount;
-        this.gbpAmount = gbpAmount;	
+        this.usdAmount = usdAmount;
+        this.gbpAmount = gbpAmount;
 
         this.orderId = UUID.randomUUID();
     }

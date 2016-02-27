@@ -6,7 +6,7 @@
  * <p>
  * The Abstract Factory pattern provides the operations for building the family of parts that make up a 'thing'. It 
  * allows for easy exchange of different Product families when building new 'things' given that the factories use
- * the same buildXXX interface methods for creatign new Product impls through the same Product interface.
+ * the same buildXXX interface methods for creating new Product impls through the same Product interface.
  * <p>
  * The pattern stops the 'new' word cropping up all over the place and encapsulates the creation of objects in one 
  * place.

@@ -21,19 +21,30 @@
  * CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
  */
 
-package com.gazbert.patterns.behavioural.command;
-
-import com.gazbert.patterns.behavioural.command.domain.Order;
+package com.gazbert.patterns.behavioural.observer.jdkeventing;
 
 /**
- * The Command interface.
+ * A Subject. Also called a Concrete Observable.
  *
  * @author gazbert
  */
-public interface OrderCommand {
+public final class DollarSterlingMarket extends Market {
 
     /**
-     * The Command Invoker calls this.
+     * 1 single instance of this on the exchange for obvious reasons!
      */
-    void execute(Order order);
+    private static final DollarSterlingMarket SINGLE_INSTANCE = new DollarSterlingMarket();
+
+    // lockdown
+    private DollarSterlingMarket() {
+    }
+
+    /**
+     * Returns market.
+     *
+     * @return the single instance
+     */
+    public static Market getInstance() {
+        return SINGLE_INSTANCE;
+    }
 }

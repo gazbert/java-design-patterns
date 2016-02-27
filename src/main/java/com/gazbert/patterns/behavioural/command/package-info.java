@@ -17,7 +17,7 @@
  * 
  * <h2>Actors</h2>
  * <ul>
- * <li>Command interface - all Concrete Commands must implement this; this is the interace for executing an operation.</li>
+ * <li>Command interface - all Concrete Commands must implement this; this is the interface for executing an operation.</li>
  * <li>Concrete Command - the Command implementation. Performs the operation on a Receiver.</li>
  * <li>Receiver - the target for the Command. It knows how to make things happen/perform the operations. 
  *                Command objects wrap a Receiver and invoke actions on it. </li>
@@ -28,7 +28,7 @@
  * </ul>
  * 
  * <h2>Usages</h2>
- * Very common in UI toolkits, e.g. when a buton is clicked an actionPerformed() method is oftern called. Also used
+ * Very common in UI toolkits, e.g. when a button is clicked an actionPerformed() method is often called. Also used
  * in server-side frameworks for processing messages/commands from queues; example code picks orders off an exchange
  * queue.
  * 

@@ -30,6 +30,8 @@ import java.math.BigDecimal;
 /**
  * Demonstrates Visitor pattern.
  *
+ * TODO Assert stuff!
+ *
  * @author gazbert
  * @since 2016/02/27
  */

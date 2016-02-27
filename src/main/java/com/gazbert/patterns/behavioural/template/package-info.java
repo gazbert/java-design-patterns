@@ -18,12 +18,12 @@
  * <ul>
  * <li>Abstract Template - an abstract class that provides the template method and a number of (optional) hooks
  *                         that subclasses can/must implement.</li>
- * <li>Template Subclass - extends the Abstract Template class and ovverrides some of the superclass's hooks.</li>
+ * <li>Template Subclass - extends the Abstract Template class and overrides some of the superclass's hooks.</li>
  * <li>Client - calls the template method to do something.</li>
  * </ul>
  * 
  * <h2>Usages</h2>
- * Very popular in frameworks where control needs to be maintained for the overall alogrithm, but flexibility is 
+ * Very popular in frameworks where control needs to be maintained for the overall algorithm, but flexibility is
  * required to allow subclasses to provide the details it needs to fulfil the behaviour.
  * <p>
  * @author gazbert
