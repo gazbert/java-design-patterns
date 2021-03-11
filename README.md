@@ -1,4 +1,4 @@
-## java-design-patterns
+## Java Design Patterns
 
 [![Build Status](https://travis-ci.org/gazbert/java-design-patterns.svg?branch=master)](https://travis-ci.org/gazbert/java-design-patterns)
 
