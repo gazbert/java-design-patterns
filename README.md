@@ -1,4 +1,4 @@
-## Java Design Patterns
+# Java Design Patterns
 
 [![Maven CI](https://github.com/gazbert/java-design-patterns/actions/workflows/maven.yml/badge.svg?branch=master)](https://github.com/gazbert/java-design-patterns/actions/workflows/maven.yml)
 
@@ -8,14 +8,12 @@ A cookbook of commonly used Java design patterns based on examples from:
 * "Head First Design Patterns" - Freeman et al
 * "Java Design Pattern Essentials" - Tony Brevis
 
-I'll be adding new patterns to the project on an ad-hoc basis.
-
-Each pattern is contained in its own package - the package-info will provide more details and the Test class 
+Each pattern is contained in its own package. The Javadoc will provide more details and the Test class 
 will demonstrate how to use it.
 
 Any comments/bugs/better ways of doing things, send 'em my way.
 
-### Behavioural Patterns
+## Behavioural Patterns
 
 1. State
 1. Chain of Responsibility
@@ -25,7 +23,7 @@ Any comments/bugs/better ways of doing things, send 'em my way.
 1. Template Method
 1. Visitor
 
-### Creational Patterns
+## Creational Patterns
 
 1. Builder
 1. Factory Method
@@ -33,8 +31,19 @@ Any comments/bugs/better ways of doing things, send 'em my way.
 1. Abstract Factory
 1. Singleton
 
-### Structural Patterns
+## Structural Patterns
 
 1. Adapter
 1. Decorator
 1. Facade
+
+# Build Guide
+You'll need JDK 11+ installed on your dev box.
+
+You can use the included Maven wrapper to build the project and pull down the dependencies:
+
+```bash
+./mvnw clean install
+```
+
+The Javadoc can be found in the `<project-root>/target/apidocs` folder after you execute the build.
