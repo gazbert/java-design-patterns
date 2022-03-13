@@ -38,7 +38,7 @@
     </dependency>
   </dependencies>
   <build>
-    <defaultGoal>clean package</defaultGoal>
+    <defaultGoal>clean install</defaultGoal>
     <plugins>
       <plugin>
         <artifactId>maven-compiler-plugin</artifactId>
@@ -51,11 +51,20 @@
       <plugin>
         <artifactId>maven-assembly-plugin</artifactId>
         <version>3.3.0</version>
-        <configuration>
-          <descriptors>
-            <descriptor>src/assemble/distribution.xml</descriptor>
-          </descriptors>
-        </configuration>
+        <executions>
+          <execution>
+            <id>distro-assembly</id>
+            <phase>package</phase>
+            <goals>
+              <goal>single</goal>
+            </goals>
+            <configuration>
+              <descriptors>
+                <descriptor>src/assemble/distribution.xml</descriptor>
+              </descriptors>
+            </configuration>
+          </execution>
+        </executions>
       </plugin>
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>

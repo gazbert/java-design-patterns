@@ -1,6 +1,6 @@
 ## Java Design Patterns
 
-[![Build Status](https://travis-ci.com/gazbert/java-design-patterns.svg?branch=master)](https://travis-ci.com/gazbert/java-design-patterns)
+[![Maven CI](https://github.com/gazbert/java-design-patterns/actions/workflows/maven.yml/badge.svg?branch=master)](https://github.com/gazbert/java-design-patterns/actions/workflows/maven.yml)
 
 A cookbook of commonly used Java design patterns based on examples from: 
 
