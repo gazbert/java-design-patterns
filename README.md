@@ -1,5 +1,6 @@
 # Java Design Patterns
 
+[![Gradle CI](https://github.com/gazbert/java-design-patterns/actions/workflows/gradle.yml/badge.svg?branch=master)](https://github.com/gazbert/java-design-patterns/actions/workflows/gradle.yml) 
 [![Maven CI](https://github.com/gazbert/java-design-patterns/actions/workflows/maven.yml/badge.svg?branch=master)](https://github.com/gazbert/java-design-patterns/actions/workflows/maven.yml)
 
 A cookbook of commonly used Java design patterns based on examples from: 
