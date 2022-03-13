@@ -30,10 +30,10 @@ package com.gazbert.patterns.creational.abstractfactory.product;
  */
 public interface Product {
 
-    /**
-     * Hugely simplified for the demo...
-     *
-     * @return
-     */
-    String getProductDetails();
+  /**
+   * Hugely simplified for the demo...
+   *
+   * @return the product details.
+   */
+  String getProductDetails();
 }

@@ -34,9 +34,9 @@ import java.math.BigDecimal;
  */
 public interface Account {
 
-    BigDecimal getBalance();
+  BigDecimal getBalance();
 
-    boolean isOverdraftAvailable();
+  boolean isOverdraftAvailable();
 
-    void creditAccount(final BigDecimal credit);
+  void creditAccount(final BigDecimal credit);
 }

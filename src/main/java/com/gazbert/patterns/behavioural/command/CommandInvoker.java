@@ -60,6 +60,7 @@ public class CommandInvoker {
      * The 'business method' - we've received a new Order on the exchange.
      *
      * @param commandId the command id.
+     * @param order the order.
      */
     public void onNewOrderCommand(String commandId, Order order) {
         // TODO pre-condition check to avoid NPE - is it in map?

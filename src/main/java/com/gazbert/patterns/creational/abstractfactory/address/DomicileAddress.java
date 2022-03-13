@@ -21,7 +21,6 @@
  * CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
  */
 
-
 package com.gazbert.patterns.creational.abstractfactory.address;
 
 /**
@@ -29,9 +28,9 @@ package com.gazbert.patterns.creational.abstractfactory.address;
  */
 public class DomicileAddress implements Address {
 
-    @Override
-    public String getAddressDetails() {
+  @Override
+  public String getAddressDetails() {
 
-        return "Domicile Address details with UK specific bit n pieces";
-    }
+    return "Domicile Address details with UK specific bits n pieces";
+  }
 }

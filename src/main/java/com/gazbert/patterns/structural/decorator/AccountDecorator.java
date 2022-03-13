@@ -67,7 +67,7 @@ abstract class AccountDecorator extends AbstractAccount {
 
     /**
      * Credits the account after applying the broker fee.
-     * @param credit
+     * @param credit the credit amount.
      */
     @Override
     public synchronized void credit(final BigDecimal credit) {
@@ -95,7 +95,7 @@ abstract class AccountDecorator extends AbstractAccount {
 
     /**
      * Debits the account.
-     * @param debit
+     * @param debit the debit amount.
      */
     @Override
     public synchronized void debit(final BigDecimal debit) {
@@ -107,7 +107,7 @@ abstract class AccountDecorator extends AbstractAccount {
 
     /**
      * Gets the broker fee from the sublcass.
-     * @return
+     * @return the broker fee.
      */
     protected abstract BigDecimal getBrokerFee();        
 }

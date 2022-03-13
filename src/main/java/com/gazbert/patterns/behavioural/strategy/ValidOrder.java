@@ -31,7 +31,7 @@ import java.util.UUID;
  * <p>
  * This is a simple impl for purposes of demo'ing Strat pattern.
  * <p>
- * Order is for FX trading of US dollar <> GB pound market.
+ * Order is for FX trading of US dollar to GB pound market.
  *
  * @author gazbert
  */

@@ -57,7 +57,7 @@ abstract class AbstractAccount implements Account {
 
     /**
      * Credits the account.
-     * @param credit
+     * @param credit the credit amount.
      */
     @Override
     public synchronized void credit(final BigDecimal credit) {
@@ -68,7 +68,7 @@ abstract class AbstractAccount implements Account {
 
     /**
      * Debits the account.
-     * @param debit
+     * @param debit the debit amount.
      */
     @Override
     public synchronized void debit(final BigDecimal debit) {

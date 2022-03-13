@@ -33,18 +33,22 @@ package com.gazbert.patterns.behavioural.state;
  */
 public interface BugState {
 
-    /**
-     * Update number of hours worked on a bug in this state.
-     */
-    void updateHoursWorked(int hours);
+  /**
+   * Update number of hours worked on a bug in this state.
+   *
+   * @param hours the hours worked.
+   */
+  void updateHoursWorked(int hours);
 
-    /**
-     * Returns cost of the bug fix for this state.
-     */
-    int getCost();
+  /**
+   * Returns cost of the bug fix for this state.
+   *
+   * @return the cost.
+   */
+  int getCost();
 
-    /**
-     * Sets the next State.
-     */
-    void setNextState();
+  /**
+   * Sets the next State.
+   */
+  void setNextState();
 }

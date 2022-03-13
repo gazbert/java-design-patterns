@@ -33,7 +33,7 @@ import java.util.concurrent.ConcurrentHashMap;
  * <p>
  * This is a simple impl for purposes of demo'ing Strat pattern.
  * <p>
- * Order book is for FX USD <> GBP market only.
+ * Order book is for FX USD to GBP market only.
  *
  * @author gazbert
  */

@@ -38,6 +38,8 @@ public class TradingFacade {
      * subsystems to execute the trade.... zzzz.... ;-)
      * <p>
      * This example is <em>massively</em> simplified, but you get the idea!
+     *
+     * @param trade the trade details.
      */
     public void executeBuyOrder(TradeDetails trade) {
         final TradingEngine tradingEngine = new TradingEngine();

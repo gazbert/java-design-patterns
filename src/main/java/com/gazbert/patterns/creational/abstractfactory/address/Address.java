@@ -33,7 +33,7 @@ public interface Address {
     /**
      * Hugely simplified for the demo...
      *
-     * @return
+     * @return the address details.
      */
     String getAddressDetails();
 }

@@ -29,7 +29,7 @@ package com.gazbert.patterns.behavioural.strategy;
  * <p>
  * Clients uses this to execute trades.
  * <p>
- * Very simple impl only deals with USD <> GBP market.
+ * Very simple impl only deals with USD to GBP market.
  * <p>
  *
  * @author gazbert
