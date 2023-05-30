@@ -58,3 +58,10 @@ You can use the included Maven wrapper to build the project and pull down the de
 ```
 
 The Javadoc can be found in the `<project-root>/target/apidocs` folder after you execute the build.
+
+# Contributing
+
+Issues and new features are managed using the project [Issue Tracker](https://github.com/gazbert/java-design-patterns/issues) -
+submit bugs here.
+
+You are welcome to take on new features or fix bugs! See [here](CONTRIBUTING.md) for how to get involved.
