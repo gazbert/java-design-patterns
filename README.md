@@ -9,13 +9,13 @@ A cookbook of commonly used Java design patterns based on examples from:
 * "Head First Design Patterns" - Freeman et al
 * "Java Design Pattern Essentials" - Tony Brevis
 
-Each pattern is contained in its own package. The Javadoc will provide more details and the Test class 
+Each pattern is contained in its own package. The Javadoc will provide more details and the unit tests 
 will demonstrate how to use it.
 
 Any comments/bugs/better ways of doing things, send 'em my way.
 
 ## Design Patterns
-The following patterns are described using code, unit tests, and Javadoc.
+
 ### Behavioural
 
 1. State
