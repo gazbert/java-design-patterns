@@ -21,10 +21,11 @@ dependencies {
 }
 
 group = 'com.gazbert'
-version = '1.3.0'
+version = '1.4.0'
 description = 'Java Design Patterns Cookbook'
-java.sourceCompatibility = JavaVersion.VERSION_11
+java.sourceCompatibility = JavaVersion.VERSION_17
 
+javadoc.options.addStringOption('Xdoclint:none', '-quiet')
 java {
     withJavadocJar()
 }
