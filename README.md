@@ -14,7 +14,9 @@ will demonstrate how to use it.
 
 Any comments/bugs/better ways of doing things, send 'em my way.
 
-## Behavioural Patterns
+## Design Patterns
+The following patterns are described using code, unit tests, and Javadoc.
+### Behavioural
 
 1. State
 1. Chain of Responsibility
@@ -24,7 +26,7 @@ Any comments/bugs/better ways of doing things, send 'em my way.
 1. Template Method
 1. Visitor
 
-## Creational Patterns
+### Creational
 
 1. Builder
 1. Factory Method
@@ -32,16 +34,16 @@ Any comments/bugs/better ways of doing things, send 'em my way.
 1. Abstract Factory
 1. Singleton
 
-## Structural Patterns
+### Structural
 
 1. Adapter
 1. Decorator
 1. Facade
 
-# Build Guide
+## Build Guide
 You'll need JDK 17+ installed on your dev box.
 
-## Gradle
+### Gradle
 You can use the included Gradle wrapper to build the project and pull down the dependencies:
 
 ```bash
@@ -50,7 +52,7 @@ You can use the included Gradle wrapper to build the project and pull down the d
 
 The Javadoc can be found in the `<project-root>/build/docs/javadoc` folder after you execute the build.
 
-## Maven
+### Maven
 You can use the included Maven wrapper to build the project and pull down the dependencies:
 
 ```bash
@@ -59,8 +61,7 @@ You can use the included Maven wrapper to build the project and pull down the de
 
 The Javadoc can be found in the `<project-root>/target/apidocs` folder after you execute the build.
 
-# Contributing
-
+## Contributing
 Issues and new features are managed using the project [Issue Tracker](https://github.com/gazbert/java-design-patterns/issues) -
 submit bugs here.
 
