@@ -39,7 +39,7 @@ Any comments/bugs/better ways of doing things, send 'em my way.
 1. Facade
 
 # Build Guide
-You'll need JDK 11+ installed on your dev box.
+You'll need JDK 17+ installed on your dev box.
 
 ## Gradle
 You can use the included Gradle wrapper to build the project and pull down the dependencies:
